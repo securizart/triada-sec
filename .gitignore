@@ -1,0 +1,16 @@
+# Basura de macOS
+._*
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporales
+*.swp
+*~
+/tmp/
+
+# Nunca versionar credenciales ni keyrings binarios
+*.key
+*.gpg
+*secret*
+*password*

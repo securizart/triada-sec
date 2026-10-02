@@ -1,0 +1,41 @@
+# Compatibility matrix
+
+## Layer A — UTM VM on M2 (validated, Phase 2)
+
+| Item | Value |
+|---|---|
+| Base | Debian 13 "Trixie" (stable) |
+| Kernel | `6.12.111+deb13-arm64-16k` |
+| Page size | 16384 (16 KiB) — reproduces the Mac |
+| Session | GNOME / Wayland |
+| Mesa | 25.1.0 (Bananas) |
+| GL renderer | virgl -> ANGLE -> Metal (Apple M2) |
+| glmark2 | 775 (was 550 on Debian's Mesa 25.0.7) |
+| Storage | external SSD (exFAT), isolated from Layer B |
+
+Diagnostic note: on virtio-gpu, `eglinfo -B` reports `llvmpipe` via the
+default (surfaceless) platform even when the session is accelerated. The
+valid measure of acceleration is `glmark2-wayland` / Mutter, not `eglinfo`.
+
+## Pinning evidence (Phase 2)
+
+`u-boot-asahi`: Debian ships `2025.01-3+deb13u1` (newer, mainline, no Asahi
+patches); Bananas ships `2025.01-1` (older, with Asahi patches). The 1050 pin
+makes APT pick the Bananas one **despite being older** — required for metal to
+boot. Verified with `apt-cache policy u-boot-asahi`.
+
+## Pending real-hardware (M1) validation
+
+1. Bananas pin over the REAL Asahi kernel / u-boot (VM only proves it
+   resolves).
+2. Apply and verify `lib/hold-boot-family.sh hold` on the cloned base; then
+   install a distro layer and confirm the Mac still boots after reboot.
+3. GDM-on-Bananas behaviour with `securizart`'s expired password (graphical
+   change may differ from the SSH/TTY path).
+4. Wayland overlay on the Bananas GNOME (not only the netinst GNOME).
+
+## Hardware note (M1 vs M2)
+
+On real hardware, M1 (G13 GPU) has working hardware GL; M2 (G14) falls back to
+software rendering under the current Asahi kernel. This is a metal concern,
+not a VM concern (the VM uses virgl, not AGX).

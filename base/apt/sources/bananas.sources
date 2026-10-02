@@ -1,0 +1,5 @@
+Types: deb
+URIs: https://bananas-archive.debian.net/bananas-archive
+Suites: trixie-bananas
+Components: main
+Signed-By: /etc/apt/keyrings/bananas-archive-keyring.gpg
