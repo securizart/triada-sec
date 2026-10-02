@@ -39,3 +39,26 @@ boot. Verified with `apt-cache policy u-boot-asahi`.
 On real hardware, M1 (G13 GPU) has working hardware GL; M2 (G14) falls back to
 software rendering under the current Asahi kernel. This is a metal concern,
 not a VM concern (the VM uses virgl, not AGX).
+
+## Phase 3 — Red tools, 16k verification (VM)
+
+All via apt (Debian/Kali arm64 binaries are built for 16k). Each ran without
+`Bus error` on the 16k VM:
+
+| Tool | Lang | Source | 16k |
+|---|---|---|---|
+| nmap, masscan, whois, dnsutils, netcat-openbsd | C/mixed | Debian | OK |
+| gobuster | Go | Debian | OK |
+| dirb | C | Debian | OK |
+| sqlmap, wfuzz | Python | Debian | OK (interpreted) |
+| whatweb | Ruby | Debian | OK (interpreted) |
+| nikto | Perl | Kali (non-free) | OK (interpreted) |
+| tshark, tcpdump, ettercap, dsniff, macchanger | C | Debian | OK |
+| bettercap | Go | Debian | OK |
+
+Interpreted tools (Python/Perl/Ruby) have no 16k risk. Compiled tools (C/Go)
+from apt are built for 16k. Real 16k risk is prebuilt binaries fetched OUTSIDE
+apt (GitHub releases, AppImages) — verified case by case.
+
+Pending on M1: Wi-Fi monitor mode / packet injection for ettercap/bettercap
+(needs the Mac's Broadcom chip, absent in the VM).

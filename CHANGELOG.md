@@ -3,6 +3,28 @@
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 All dates in YYYY-MM-DD. Versions track project phases.
 
+## [0.3.0] - 2026-10-02
+
+Phase 3 begins — the Red (offensive) profile. Kali repository added and
+pinned defensively; first three curated tool groups installed and verified on
+the VM, without touching the Asahi base.
+
+### Added
+- **Kali repository, pinned to 100** (`profiles/red/apt/kali.sources`,
+  `kali.pref`): below Debian's 500, so Kali never installs/upgrades
+  automatically — only explicitly named packages. Keys (2025 + 2012) verified.
+  Bananas (1050) still beats Kali on shared packages (e.g. `u-boot-asahi`), so
+  the boot base stays protected.
+- **Red tool groups** (`profiles/red/packages/`): recon, web (+ nikto from
+  Kali), network/MITM. All 16k-verified; see docs/COMPATIBILITY.md.
+- **securizart no-root capture**: wireshark group + debconf preseed.
+- `profiles/red/profile.conf`, `docs/issues/002` (metapackage finding).
+
+### Notes
+- Golden rule: curated tools; Debian by default; `<pkg>/kali-rolling` for
+  Kali-only; **never** `-t kali-rolling`. See docs/issues/002.
+- Kali keyring created by procedure (not committed); fingerprints in
+  docs/LICENSING.md.
 ## [0.2.0] - 2026-10-02
 
 Phase 2 — common base — complete on the VM layer (Layer A). Debian 13 + the

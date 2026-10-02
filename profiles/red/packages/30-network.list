@@ -1,0 +1,9 @@
+# triada-sec · Red · network / MITM
+# Todas desde Debian stable (pin respetado). 16k-verificadas.
+# Config: wireshark-common/install-setuid=true (captura no-root para securizart).
+tshark
+tcpdump
+ettercap-text-only
+bettercap
+dsniff
+macchanger

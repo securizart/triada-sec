@@ -1,0 +1,9 @@
+# triada-sec · Red · web
+# Desde Debian stable (pin respetado):
+gobuster
+sqlmap
+wfuzz
+whatweb
+dirb
+# Desde Kali (instalar con: apt install nikto/kali-rolling). non-free. Ver docs/LICENSING.md
+nikto

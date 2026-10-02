@@ -1,0 +1,7 @@
+# triada-sec · Red · recon
+# Todas desde Debian stable (pin respetado). 16k-verificadas.
+nmap
+masscan
+dnsutils
+whois
+netcat-openbsd

@@ -26,3 +26,14 @@ license under which it installs, and any trademark/usage note.
 | Debian | deb.debian.org | per-package | base |
 | Bananas (Asahi for Debian) | bananas-archive.debian.net | per-package (mostly GPL) | kernel/u-boot/mesa |
 | _(Kali, Parrot, SIFT, REMnux, ... — Phase 3)_ | | | |
+
+## Phase 3 additions (Red profile)
+
+| Source | Official repo | Installs under | Notes |
+|---|---|---|---|
+| Kali Linux | http.kali.org/kali | per-package | Added as `kali-rolling`, pinned to 100 (below Debian). Only explicitly named packages install; `-t kali-rolling` never used. Keys verified (2025 `827C8569...ED65462EC8D5E4C5`; 2012 `44C6513A...ED444FF07D8D0BF6`). |
+| nikto | http.kali.org/kali (**non-free**) | nikto's own license | Web scanner, Kali **non-free** only. Installed via `nikto/kali-rolling`. non-free = not fully DFSG-free per Debian; redistributable, documented for transparency. |
+
+Most Red tools (nmap, sqlmap, gobuster, dirb, whatweb, wfuzz, tshark,
+tcpdump, ettercap, bettercap, dsniff, macchanger, masscan, dnsutils, whois,
+netcat) install from **Debian stable** under their own upstream licenses.
