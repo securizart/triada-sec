@@ -1,3 +1,8 @@
 # triada-sec · Red · default · vulnerability / web
 # Instalacion limpia (apt), 16k-OK.
 nuclei          # Kali — escaner por plantillas (Go)
+exploitdb       # Kali — Exploit-DB + searchsploit (shell+datos, arch all)
+sploitscan      # Debian — enriquece CVEs (EPSS, CISA KEV, exploits)
+pompem          # Debian — buscador de exploits/vulnerabilidades
+# nota: wapiti NO entra aqui -> full (cadena mitmproxy->python3.14->libc)
+# opcional voluminoso: exploitdb-bin-sploits exploitdb-papers
