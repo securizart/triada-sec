@@ -1,0 +1,16 @@
+# triada-sec · Red · default · windows resources (post-explotacion)
+# Kali. MAYORMENTE recursos Windows (.exe/.ps1 para el target, 16k-irrelevante).
+# Ejecutables locales ARM64: dnschef, heartleech, hyperion.
+mimikatz        # Kali — extraccion de credenciales Windows (recurso)
+powercat        # Kali — netcat en PowerShell (.ps1)
+windows-binaries # Kali — coleccion binarios Windows (incluye sbd y dbd)
+windows-privesc-check # Kali — escalada de privilegios Windows (script)
+secure-socket-funneling-windows-binaries # Kali — SSF, tuneles (binarios Win)
+wce             # Kali — Windows Credentials Editor (recurso)
+dnschef         # Kali — proxy DNS (Python, corre en host)
+ncat-w32        # Kali — ncat para Windows (recurso)
+dbd             # Kali — backdoor shell (recurso)
+tftpd32         # Kali — servidor TFTP para Windows (recurso)
+heartleech      # Kali — scanner Heartbleed (C, corre en host)
+hyperion        # Kali — crypter de PE (via wine)
+# nota: sbd NO va suelto -> viene en windows-binaries (conflicto si se pide aparte)

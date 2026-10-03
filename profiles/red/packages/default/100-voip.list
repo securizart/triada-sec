@@ -1,0 +1,16 @@
+# triada-sec · Red · default · voip / sip
+# sipvicious (Debian), resto Kali. 16k-verificado (arranque).
+sipvicious      # Debian — suite SIP (bins: svmap, svwar, svcrack, svreport, svcrash)
+sipp            # Kali — generador de trafico SIP
+enumiax         # Kali — enumeracion IAX2 (Asterisk)
+voiphopper      # Kali — salto de VLAN de voz
+siparmyknife    # Kali — navaja suiza SIP
+rtpbreak        # Kali — analisis de flujos RTP
+rtpflood        # Kali — flood RTP
+rtpinsertsound  # Kali — inyeccion de audio en RTP
+rtpmixsound     # Kali — mezcla de audio en RTP
+ohrwurm         # Kali — fuzzer RTP
+iaxflood        # Kali — flood IAX2
+inviteflood     # Kali — flood de INVITE SIP
+protos-sip      # Kali — suite PROTOS SIP (Java)
+# funcion real = requiere PBX/objetivo SIP; en VM solo arranque

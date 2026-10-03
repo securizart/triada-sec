@@ -1,0 +1,6 @@
+# triada-sec · Red · default · fuzzing
+# afl++ (Debian) + sfuzz/spike (Kali). 16k-verificado.
+afl++           # Debian — fuzzer guiado por cobertura (bins: afl-fuzz, afl-cc...)
+sfuzz           # Kali — fuzzer de red simple
+spike           # Kali — fuzzer de protocolos (bins: generic_send_tcp...)
+# nota: wfuzz ya declarado en web

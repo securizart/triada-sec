@@ -1,0 +1,7 @@
+# triada-sec · Red · default · crypto / steganography
+# Debian-native (16k-verificado). Offline.
+ccrypt          # Debian — cifrado/descifrado de ficheros
+steghide        # Debian — estego en JPEG/BMP/WAV
+stegsnow        # Debian — estego en espacios en blanco de texto
+stegosuite      # Debian — estego GUI (Java/SWT)
+# nota: aesfix ya declarado en el Cubo A, no se repite aqui
