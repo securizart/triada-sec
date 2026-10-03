@@ -1,0 +1,8 @@
+# triada-sec · Red · default · recon / OSINT
+# Amplia el recon de core. Instalacion limpia (apt), 16k-OK.
+dnsrecon        # Debian — DNS recon (Python)
+dnsenum         # Debian — enumeracion DNS (Perl)
+fierce          # Debian — DNS scanner (Python)
+recon-ng        # Debian — framework OSINT (Python)
+sublist3r       # Debian — enumeracion subdominios (Python)
+amass           # Kali — OWASP Amass, asset discovery (Go)

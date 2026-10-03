@@ -1,0 +1,9 @@
+# triada-sec · Red · default · Active Directory / Windows
+# Kit de pentest AD. Instalacion limpia (apt), 16k-OK.
+# Binarios de privilegios (responder) en /usr/sbin.
+smbmap              # Debian — enumeracion SMB (Python)
+impacket-scripts    # Debian — suite impacket (secretsdump, GetADUsers, ...) en /usr/bin/impacket-*
+enum4linux          # Kali — enumeracion SMB/AD (Perl)
+responder           # Kali — captura credenciales LLMNR/NBT-NS (/usr/sbin, Python)
+sharphound          # Kali — colector BloodHound on-prem (C#) — plataforma CE completa en full
+azurehound          # Kali — colector BloodHound Azure (Go)

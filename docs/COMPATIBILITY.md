@@ -114,3 +114,16 @@ Verify on M1: clinfo detects AGX, hashcat -I lists it, short benchmark.
   Broadcom chip — the hardest offensive unknown. VM has only virtio-net.
 - **hashcat GPU** via rusticl (see above).
 - **Live network capture** (tshark/ettercap/bettercap) on a physical interface.
+
+## Architecture decision: stable base, never testing
+
+The base stays Debian stable (Trixie). Migrating to testing would unblock
+bleeding-edge tools (Python 3.14 / libc 2.42) but risks the Asahi boot chain,
+loses security support, and breaks reproducibility. Bleeding-edge tools go to
+the full tier via pipx/gem/container instead. See docs/FULL-TOOLS.md.
+
+## Red default tier — added tools (16k-OK, base untouched)
+recon/OSINT: dnsrecon, dnsenum, fierce, recon-ng, sublist3r, amass
+vuln: nuclei
+Active Directory: smbmap, impacket-scripts, enum4linux, responder,
+  sharphound, azurehound

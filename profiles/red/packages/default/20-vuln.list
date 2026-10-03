@@ -1,0 +1,3 @@
+# triada-sec · Red · default · vulnerability / web
+# Instalacion limpia (apt), 16k-OK.
+nuclei          # Kali — escaner por plantillas (Go)

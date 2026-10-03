@@ -3,6 +3,28 @@
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 All dates in YYYY-MM-DD. Versions track project phases.
 
+## [0.4.0] - 2026-10-03
+
+Red default tier + package tiering (core/default/full).
+
+### Added
+- Package tiers: `profiles/red/packages/core/` (the 5 original groups) and
+  `default/` (recon, vuln, active-directory). profile.conf declares core and
+  default lists; full is documented for the future.
+- Red default tools (16k-OK, base untouched): dnsrecon, dnsenum, fierce,
+  recon-ng, sublist3r, amass, nuclei, smbmap, impacket-scripts, enum4linux,
+  responder, sharphound, azurehound.
+- `docs/FULL-TOOLS.md`: the full tier (pipx/gem/container), three blockage
+  categories, and the blocked-tool list (crackmapexec, theharvester, wapiti,
+  evil-winrm, gvm-tools/openvas, bloodhound-CE).
+
+### Notes
+- Architecture decision: base stays Debian stable, never testing (protects
+  Asahi boot chain / security support / reproducibility). Bleeding-edge tools
+  -> full via isolated envs.
+- bloodhound: default ships only collectors (sharphound/azurehound); the CE
+  platform (+neo4j) -> full.
+- Removing kali-defaults restored Python EXTERNALLY-MANAGED (correct for pipx).
 ## [0.3.2] - 2026-10-03
 
 Red profile complete — all five tool groups installed and verified on the VM,
