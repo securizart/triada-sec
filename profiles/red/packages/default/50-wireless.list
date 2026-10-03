@@ -1,0 +1,7 @@
+# triada-sec · Red · default · wireless
+# Debian-native (Cubo A). Funcion monitor/inyeccion = Capa B (M1 real).
+bully           # Debian — ataque WPS por fuerza bruta
+cowpatty        # Debian — ataque de diccionario WPA-PSK (offline)
+hcxkeys         # Debian — generador de PMK (binario: wlangenpmk / wlangenpmkocl)
+weplab          # Debian — cracking de claves WEP
+airgraph-ng     # Debian — grafos cliente-AP desde capturas (usa graphviz)
