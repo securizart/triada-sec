@@ -32,3 +32,43 @@ that bring their own dependencies without touching the base.
 For suspected-heavy tools, also check "After this operation, X will be used".
 After a `remove`, review what `autoremove` proposes before running it with -y
 (it can sweep shared deps like kali-defaults and wanted collectors).
+
+## Declared full tools (install recipe)
+
+### netexec (nxc) — INSTALLED
+- roles: [vulnerability/credentials] [active-directory]
+- install: `pipx install git+https://github.com/Pennyw0rth/NetExec`
+- build-deps: pipx git rustc cargo build-essential python3-dev
+- why full: Kali .deb needs python3 >= 3.14 (forbidden on the stable base)
+- 16k: OK (netifaces/arc4 C-extensions compile against system python 3.13)
+- replaces: crackmapexec (same python3.14 clash, blocked)
+
+## Full roster by reason
+
+Tools live in `full` for one of two distinct reasons. The `-s` dry-run is the
+arbiter: a tool is only default-eligible if `apt-get install -s` does NOT raise
+libc/python3. "In a repo" is necessary but NOT sufficient (wapiti is in Debian
+yet still breaks the base).
+
+### Reason A — breaks the stable base (libc / python3.14 / newer module)
+Must be installed isolated (pipx/gem). Confirmed via `-s`:
+- wapiti        -> mitmproxy -> python3-mitmproxy-rs -> libpython3.14 -> libc 2.42
+                  (breaks from BOTH Debian and Kali)
+- theharvester  -> python3-aiodns >= 4.0 (base has 3.2.0)
+- evil-winrm    -> ruby-nori >= 2.7.1 (base has 2.6.0)  [gem install]
+- faraday       -> python3-mako >= 1.3.10 (base has 1.3.9)
+- legion        -> libpython3.14-stdlib -> libc 2.42
+- crackmapexec  -> python3-aardwolf -> python3 >= 3.14   (superseded by netexec)
+- gvm-tools/openvas -> libpython3.14 -> libc 2.42  (+ Greenbone license review)
+
+### Reason B — installs clean but needs a backend/account (not base breakage)
+`-s` is clean, but unfit for a "install-and-run" default:
+- starkiller    -> GUI client, needs PowerShell Empire backend running
+- beef-xss      -> raises a service + its own DB
+- maltego       -> Java client, requires registering an account to be useful
+- bloodhound-CE -> full platform + neo4j (default ships only the collectors)
+
+## Install method in full
+- Python: `pipx install <tool>` (or `git+https://...` when not on PyPI).
+- Ruby:   `gem install --user-install <tool>`.
+- Platforms: container / dedicated setup; review licenses (openvas) first.
