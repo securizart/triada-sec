@@ -3,6 +3,21 @@
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 All dates in YYYY-MM-DD. Versions track project phases.
 
+## [0.3.1] - 2026-10-03
+
+Update policy: no automatic updates (protects the Apple Silicon boot chain).
+
+### Added
+- `base/overlay/20-disable-auto-updates.sh`: masks apt-daily timers, disables
+  fwupd-refresh, sets GNOME Software to notify-but-not-download, reinforces via
+  apt.conf, installs a /etc/motd disclaimer.
+- `bin/triada-update`: safe manual update — refresh, simulate, verify the
+  Asahi boot family is untouched, confirm, then apply. Validated on the VM
+  (applied 6 webkit security patches without touching the base).
+
+### Notes
+- Trade-off documented: security updates are not automatic; run
+  `sudo triada-update` deliberately. GNOME notifies when updates exist.
 ## [0.3.0] - 2026-10-02
 
 Phase 3 begins — the Red (offensive) profile. Kali repository added and

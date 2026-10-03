@@ -62,3 +62,13 @@ apt (GitHub releases, AppImages) — verified case by case.
 
 Pending on M1: Wi-Fi monitor mode / packet injection for ettercap/bettercap
 (needs the Mac's Broadcom chip, absent in the VM).
+
+## Update policy (all profiles)
+
+Automatic updates are **disabled by design** (apt-daily timers masked,
+fwupd-refresh disabled, GNOME Software set to notify-but-not-download). An
+unattended update could break the Apple Silicon boot chain. Update manually
+and deliberately with `sudo triada-update`, which refreshes, simulates, checks
+that the Asahi boot family is not touched, and asks for confirmation before
+applying. Trade-off: security updates are NOT applied automatically — the user
+must run `triada-update` periodically. GNOME notifies when updates exist.

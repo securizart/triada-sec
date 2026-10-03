@@ -1,0 +1,44 @@
+#!/bin/bash
+# triada-sec — safe manual update
+# Copyright (C) 2026 Securizart
+# GPL-3.0 — see <https://www.gnu.org/licenses/gpl-3.0.html>.
+# =============================================================================
+# Actualizacion MANUAL y segura. triada-sec no se actualiza sola (politica del
+# proyecto). Este comando: refresca indices, SIMULA el upgrade, COMPRUEBA que
+# no toca la familia de arranque Asahi, y solo aplica tras confirmacion.
+# =============================================================================
+set -euo pipefail
+[ "$(id -u)" -eq 0 ] || { echo "Ejecuta con sudo: sudo triada-update" >&2; exit 1; }
+
+# Familia cuyo cambio/eliminacion puede romper el arranque en metal.
+BOOT_RE='(linux-image-.*asahi|linux-headers-.*asahi|linux-image-asahi|u-boot-asahi|asahi-|mesa|libgl1-mesa-dri|libgbm1)'
+
+echo "[triada-update] 1/4 Refrescando indices..."
+apt-get update
+
+echo "[triada-update] 2/4 Simulando actualizacion..."
+SIM="$(apt-get --simulate dist-upgrade 2>&1)"
+echo "$SIM" | grep -E '^(Inst|Remv|Conf)' | head -40
+echo "..."
+echo "$SIM" | grep -E '^[0-9]+ upgraded'
+
+echo "[triada-update] 3/4 Comprobando la familia de arranque Asahi..."
+DANGER="$(echo "$SIM" | grep -E '^(Inst|Remv)' | grep -iE "$BOOT_RE" || true)"
+if [ -n "$DANGER" ]; then
+    echo ""
+    echo "  ⚠️  ATENCION: la actualizacion afectaria a paquetes de ARRANQUE:"
+    echo "$DANGER" | sed 's/^/      /'
+    echo ""
+    echo "  En METAL esto puede romper el arranque del Mac. En VM es inofensivo."
+    echo "  Revisa cada linea. Si NO estas seguro, responde 'n' y consulta docs."
+    read -r -p "  ¿Continuar PESE A tocar el arranque? (escribe SI en mayusculas): " ans
+    [ "$ans" = "SI" ] || { echo "[triada-update] Cancelado. Nada se ha cambiado."; exit 0; }
+else
+    echo "  OK: no toca la familia de arranque."
+    read -r -p "[triada-update] 4/4 ¿Aplicar la actualizacion ahora? [s/N]: " ans
+    case "$ans" in s|S|si|SI|y|Y) ;; *) echo "[triada-update] Cancelado. Nada se ha cambiado."; exit 0;; esac
+fi
+
+echo "[triada-update] Aplicando..."
+apt-get dist-upgrade
+echo "[triada-update] Hecho. Si se actualizo el kernel en METAL, reinicia y verifica el arranque."
