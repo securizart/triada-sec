@@ -14,3 +14,7 @@
 *.gpg
 *secret*
 *password*
+
+# Excepcion: las listas de paquetes contienen "password" en el nombre
+# (grupo de cracking) pero NO son credenciales. Permitir explicitamente.
+!profiles/*/packages/*password*.list

@@ -1,0 +1,12 @@
+# triada-sec · Red · wireless
+# Todas Debian, 16k-verificadas (arrancan sin Bus error).
+# FUNCION 100% pendiente de M1: modo monitor / captura / inyeccion sobre el
+# chip Broadcom del Mac — no verificable en VM (solo virtio-net).
+# Herramientas de privilegios (wifite, mdk4, airmon/airodump/aireplay) en /usr/sbin.
+aircrack-ng
+reaver
+pixiewps
+wifite
+hcxtools
+hcxdumptool
+mdk4

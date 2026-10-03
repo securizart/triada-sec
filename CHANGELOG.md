@@ -3,6 +3,27 @@
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 All dates in YYYY-MM-DD. Versions track project phases.
 
+## [0.3.2] - 2026-10-03
+
+Red profile complete — all five tool groups installed and verified on the VM,
+on the intact Asahi base.
+
+### Added
+- `profiles/red/packages/40-password.list` (hydra, john, medusa, crunch,
+  hashid, hashcat) and `50-wireless.list` (aircrack-ng, reaver, pixiewps,
+  wifite, hcxtools, hcxdumptool, mdk4). All 16k-verified.
+- `profiles/red/profile.conf` updated: 5 groups, special install notes
+  (nikto/kali-rolling, hashcat --no-install-recommends), debconf preseed.
+
+### Notes
+- hashcat: --no-install-recommends (pocl+llvm are hard deps; drivers for
+  absent nvidia/beignet GPUs excluded). OpenCL via PoCL (CPU) works in VM.
+- Mesa pin (1050) is mandatory: Debian Trixie ships no Asahi AGX Mesa; it
+  comes from Bananas. Confirmed by Debian wiki. See docs/COMPATIBILITY.md.
+- hashcat + GPU AGX on metal: viable via rusticl (Asahi Mesa >=24.3). Metal
+  pending.
+- Red M1-pending block: wireless (monitor/capture/injection on Broadcom),
+  hashcat GPU, live capture. Documented in docs/COMPATIBILITY.md.
 ## [0.3.1] - 2026-10-03
 
 Update policy: no automatic updates (protects the Apple Silicon boot chain).

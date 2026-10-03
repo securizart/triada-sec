@@ -72,3 +72,45 @@ and deliberately with `sudo triada-update`, which refreshes, simulates, checks
 that the Asahi boot family is not touched, and asks for confirmation before
 applying. Trade-off: security updates are NOT applied automatically — the user
 must run `triada-update` periodically. GNOME notifies when updates exist.
+
+## Phase 3 — Red complete (password + wireless), 16k verification (VM)
+
+| Tool | Lang | Source | 16k | Notes |
+|---|---|---|---|---|
+| hydra, medusa, crunch | C | Debian | OK | |
+| john (+john-data) | C | Debian | OK | binary in /usr/sbin |
+| hashid | Python | Debian | OK | |
+| hashcat | C | Debian | OK | --no-install-recommends; OpenCL via PoCL (CPU) works in VM |
+| aircrack-ng, reaver, pixiewps, mdk4 | C | Debian | OK (arranca) | wireless function = M1 only |
+| wifite | Python | Debian | OK (arranca) | /usr/sbin |
+| hcxtools, hcxdumptool | C | Debian | OK (arranca) | |
+
+Privileged tools live in /usr/sbin (invoked with sudo): john suite, dsniff
+suite, wifite, mdk4, aircrack-ng's airmon/airodump/aireplay. `command not
+found` as a normal user is expected, not a failure.
+
+## Mesa drivers — why the Bananas pin is mandatory (confirmed by Debian wiki)
+
+Debian does NOT ship the Asahi AGX Mesa drivers in Trixie (only the generic
+Mesa, no AGX acceleration). The AGX drivers were upstreamed in Mesa 25.1,
+after Trixie. They must come from Bananas (we run 25.1.0). The 1050 pin is
+therefore mandatory, not optional: if the generic Debian Mesa won on metal,
+AGX acceleration would be lost (cf. the M2 software-render issue). Source:
+Debian wiki Teams/Bananas and InstallingDebianOn/Apple/M1.
+
+## hashcat + GPU AGX on metal — viable via rusticl (corrected outlook)
+
+The Asahi Mesa (Bananas, >=24.3) ships **rusticl**, which exposes the M1/M2
+GPU as an OpenCL device — Apple Silicon on Asahi is the first Khronos-listed
+conformant OpenCL 3.1 implementation via rusticl. So on metal, `hashcat -I`
+should list the AGX GPU alongside the CPU. Caveat from field reports: GPU
+compute can hang the GUI (GPU preemption not implemented yet) and perf is
+below macOS; prefer cracking from a TTY without an active graphical session.
+Verify on M1: clinfo detects AGX, hashcat -I lists it, short benchmark.
+
+## Red profile — M1-pending block (function not verifiable in VM)
+
+- **Wireless (whole group)**: monitor mode / capture / injection on the Mac's
+  Broadcom chip — the hardest offensive unknown. VM has only virtio-net.
+- **hashcat GPU** via rusticl (see above).
+- **Live network capture** (tshark/ettercap/bettercap) on a physical interface.
