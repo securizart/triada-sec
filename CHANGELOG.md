@@ -3,6 +3,35 @@
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 All dates in YYYY-MM-DD. Versions track project phases.
 
+## [0.5.0] - 2026-10-04
+### Added
+- Red core: `exploitation` group (`60-exploitation.list`) with metasploit-framework.
+- Red default: Debian-native tools (Cubo A, all 16k-verified, base untouched):
+  - recon/OSINT (+11): assetfinder, altdns, paramspider, waymore, dmitry,
+    ike-scan, braa, hping3, ssh-audit, sslscan, testssl.sh
+  - cracking (new `40-cracking.list`, +14): cewl, cupp, ncrack, brutespray,
+    nasty, sucrack, maskprocessor, statsprocessor, fcrackzip, pdfcrack,
+    rarcrack, chntpw, ophcrack, ophcrack-cli
+  - wireless (new `50-wireless.list`, +5): bully, cowpatty, hcxkeys, weplab,
+    airgraph-ng
+  - vuln (+2 Debian): sploitscan, pompem
+- Red default: Kali-pin additions: exploitdb (vuln), burpsuite (new
+  `60-web.list`), gophish (new `70-social.list`).
+- docs/BINARY-NAMES.md: package->binary map (testssl, mp64/32, sp64/32,
+  wlangenpmk).
+- docs/FULL-TOOLS.md: netexec install recipe + full roster split by reason
+  (base-breakage vs backend/account).
+- docs/issues/003-debian-first-sourcing.md: Debian-first sourcing decision,
+  refined golden rule (`-s` is the arbiter), `.gitignore *password*` gotcha.
+
+### Changed
+- Sourcing strategy pivot: default is built Debian-first (Debian Security
+  Tools catalog), Kali only for gaps.
+
+### Notes
+- wapiti stays in full: Debian package also breaks base (mitmproxy ->
+  python3.14 -> libc 2.42). Catalog presence != installable.
+
 ## [0.4.0] - 2026-10-03
 
 Red default tier + package tiering (core/default/full).
