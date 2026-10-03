@@ -6,3 +6,16 @@ fierce          # Debian — DNS scanner (Python)
 recon-ng        # Debian — framework OSINT (Python)
 sublist3r       # Debian — enumeracion subdominios (Python)
 amass           # Kali — OWASP Amass, asset discovery (Go)
+
+# --- Debian-native recon/OSINT (Cubo A, 16k-verificado) ---
+assetfinder     # Debian — descubrimiento de subdominios (Go)
+altdns          # Debian — permutacion de subdominios
+paramspider     # Debian — extraccion de parametros de URLs
+waymore         # Debian — URLs historicas (wayback/archive)
+dmitry          # Debian — recoleccion de info de host
+ike-scan        # Debian — descubrimiento/fingerprint IKE/IPsec
+braa            # Debian — SNMP masivo
+hping3          # Debian — crafting de paquetes / sondeo
+ssh-audit       # Debian — auditoria de config SSH
+sslscan         # Debian — enumeracion de cifrados TLS (engine GOST via Kali)
+testssl.sh      # Debian — auditoria TLS (binario: testssl)
