@@ -1,0 +1,17 @@
+# triada-sec · Red · default · password / cracking
+# Debian-native salvo nota (Cubo A, 16k-verificado). Offline salvo ncrack (red).
+cewl            # Debian — generador de wordlist crawleando web (Ruby)
+cupp            # Debian — perfilador de contrasenas (Python)
+ncrack          # Debian — cracker de login de red (familia hydra)
+brutespray      # Debian — fuerza bruta desde salida de nmap
+nasty           # Debian — fuerza bruta de claves GPG
+sucrack         # Debian — fuerza bruta de su local
+maskprocessor   # Debian — generador de candidatos (binario: mp64/mp32)
+statsprocessor  # Debian — generador por estadistica (binario: sp64/sp32)
+fcrackzip       # Debian — cracking de ZIP
+pdfcrack        # Debian — cracking de PDF
+rarcrack        # Debian — cracking de RAR/7z/ZIP
+chntpw          # Debian — edicion de hives SAM de Windows (offline)
+ophcrack        # Debian — cracking Windows por rainbow tables (GUI)
+ophcrack-cli    # Debian — ophcrack en linea de comandos
+# nota: ophcrack necesita rainbow tables (descarga aparte)
