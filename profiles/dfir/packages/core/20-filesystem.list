@@ -1,0 +1,10 @@
+# triada-sec · DFIR · core · filesystem
+# Análisis de sistemas de ficheros y particiones. Todas Debian stable (pin 500). Pendiente humo 16k.
+sleuthkit        # Debian — The Sleuth Kit (fls, icat, mmls, fsstat…)
+fatcat           # Debian — explorador/forense de FAT
+scrounge-ntfs    # Debian — recuperación de datos en NTFS
+ext3grep         # Debian — recupera borrados en ext3
+ext4magic        # Debian — recupera borrados en ext3/ext4
+extundelete      # Debian — recupera borrados en ext3/ext4
+gpart            # Debian — adivina tablas de partición perdidas
+tableau-parm     # Debian — consulta/comando del puente write-blocker Tableau

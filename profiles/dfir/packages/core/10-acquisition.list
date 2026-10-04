@@ -1,0 +1,8 @@
+# triada-sec · DFIR · core · acquisition
+# Imagen forense y adquisición de medios. Todas Debian stable (pin 500). Pendiente humo 16k.
+dc3dd            # Debian — dd forense con hashing al vuelo
+ewf-tools        # Debian — imágenes E01 (EWF): adquisición y lectura
+afflib-tools     # Debian — formato AFF
+xmount           # Debian — montaje de imágenes con write-blocking
+safecopy         # Debian — copia de medios dañados
+myrescue         # Debian — rescate de discos con sectores defectuosos

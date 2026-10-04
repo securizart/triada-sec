@@ -1,0 +1,6 @@
+# triada-sec · DFIR · core · carving
+# Recuperación de ficheros por contenido. Todas Debian stable (pin 500). Pendiente humo 16k.
+scalpel          # Debian — carving por cabeceras, independiente de FS
+magicrescue      # Debian — recuperación por magic bytes
+recoverjpeg      # Debian — recupera JPEG y MOV
+recoverdm        # Debian — recupera ficheros en discos con sectores dañados

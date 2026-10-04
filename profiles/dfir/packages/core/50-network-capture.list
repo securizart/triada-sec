@@ -1,0 +1,3 @@
+# triada-sec · DFIR · core · network-capture
+# Captura de red en campo. Todas Debian stable (pin 500). Pendiente humo 16k.
+tcpdump          # Debian — captura de tráfico de red

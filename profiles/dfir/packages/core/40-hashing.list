@@ -1,0 +1,5 @@
+# triada-sec · DFIR · core · hashing
+# Hashing e integridad de evidencia. Todas Debian stable (pin 500). Pendiente humo 16k.
+hashdeep         # Debian — hashing recursivo y por bloques (incl. md5deep)
+ssdeep           # Debian — fuzzy hashing (similitud)
+rhash            # Debian — múltiples algoritmos y magnet links
