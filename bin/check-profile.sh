@@ -8,7 +8,7 @@ rc=0; shopt -s nullglob
 for conf in profiles/*/profile.conf; do
   pdir=$(dirname "$conf"); prof=$(basename "$pdir")
   echo "== profile: $prof =="
-  declared=$(grep -E '^(core|default|full|hardware)_lists=' "$conf" | sed 's/^[^=]*=//' \
+  declared=$(grep -E '^(core|default|source|full|hardware)_lists=' "$conf" | sed 's/^[^=]*=//' \
     | tr ' ' '\n' | grep -E '\.list$' | sed "s#^#$pdir/#" | sort -u)
   ondisk=$(find "$pdir/packages" -type f -name '*.list' 2>/dev/null | sort -u)
   while IFS= read -r file; do [ -z "$file" ] && continue
