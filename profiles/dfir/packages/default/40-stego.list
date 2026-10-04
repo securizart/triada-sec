@@ -1,0 +1,8 @@
+# triada-sec · DFIR · default · stego
+# Esteganografía: detección y acceso a payload oculto. Debian stable. Pendiente humo 16k.
+steghide         # Debian — ocultación/extracción steghide
+stegsnow         # Debian — stego en espacios de ASCII
+outguess         # Debian — stego universal
+snowdrop         # Debian — watermarking de texto
+stegcracker      # Debian — fuerza bruta de payload steghide
+stegseek         # Debian — cracker steghide rápido (sucesor de stegcracker)

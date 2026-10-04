@@ -1,0 +1,5 @@
+# triada-sec · DFIR · default · antirootkit
+# Detección de rootkits y ocultación. Debian stable (pin 500). Pendiente humo 16k.
+chkrootkit       # Debian — detector de rootkits
+rkhunter         # Debian — detector de rootkits; instalar con --no-install-recommends
+unhide.rb        # Debian — procesos ocultos (variante Ruby)

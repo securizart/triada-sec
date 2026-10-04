@@ -1,0 +1,8 @@
+# triada-sec · DFIR · default · network-forensics
+# Análisis de tráfico incautado. Debian stable (pin 500). Pendiente humo 16k.
+chaosreader      # Debian — reconstruye sesiones a HTML
+tcpick           # Debian — sniffer y seguimiento de conexiones TCP
+ngrep            # Debian — grep sobre tráfico de red
+nbtscan          # Debian — información NetBIOS
+ssldump          # Debian — análisis de TLS en captura
+dsniff           # Debian — credenciales en claro en tráfico incautado

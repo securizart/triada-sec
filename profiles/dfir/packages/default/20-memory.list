@@ -1,0 +1,7 @@
+# triada-sec · DFIR · default · memory
+# Forense de memoria. Debian stable (pin 500). Pendiente humo 16k.
+aesfix           # Debian — corrige claves AES en volcados (sustituto de aeskeyfind)
+rsakeyfind       # Debian — localiza claves RSA en memoria (sustituto de aeskeyfind)
+memdump          # Debian — vuelca memoria a stdout
+unhide           # Debian — procesos y puertos ocultos
+mac-robber       # Debian — recopila metadatos MAC de ficheros

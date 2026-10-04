@@ -1,0 +1,9 @@
+# triada-sec · DFIR · default · crypto-evidence
+# Acceso a evidencia cifrada/protegida. Debian stable (pin 500). Pendiente humo 16k.
+ccrypt                      # Debian — cifrado/descifrado de ficheros
+fcrackzip                   # Debian — passphrase de ZIP
+ophcrack-cli                # Debian — hashes Windows por rainbow tables
+bruteforce-luks             # Debian — passphrase de volúmenes LUKS incautados
+bruteforce-salted-openssl   # Debian — passphrase de ficheros OpenSSL
+bruteforce-wallet           # Debian — passphrase de wallets cifrados
+rephrase                    # Debian — passphrase de GnuPG

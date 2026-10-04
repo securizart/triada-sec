@@ -1,0 +1,13 @@
+# triada-sec · DFIR · default · triage-misc
+# Triaje, artefactos y utilidades varias. Debian stable (pin 500). Pendiente humo 16k.
+usbrip             # Debian — rastro de dispositivos USB
+forensic-artifacts # Debian — base de artefactos forenses (datos)
+forensics-colorize # Debian — resalta diffs en análisis
+ed2k-hash          # Debian — hash ed2k
+argon2             # Debian — utilidad de hashing argon2
+hashid             # Debian — identifica tipos de hash
+hashrat            # Debian — hashing recursivo multi-algoritmo
+shed               # Debian — editor hexadecimal simple
+wipe               # Debian — borrado seguro
+graudit            # Debian — auditoría de código fuente por patrones
+gpshell            # Debian — scripting de smartcards (GlobalPlatform)

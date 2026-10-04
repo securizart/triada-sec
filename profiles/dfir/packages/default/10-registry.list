@@ -1,0 +1,14 @@
+# triada-sec · DFIR · default · registry
+# Artefactos y registro de Windows. Debian stable (pin 500). Pendiente humo 16k.
+galleta          # Debian — cookies de Internet Explorer
+pasco            # Debian — caché de Internet Explorer
+rifiuti          # Debian — papelera de reciclaje (Win)
+rifiuti2         # Debian — papelera de reciclaje (sucesor)
+vinetto          # Debian — Thumbs.db
+undbx            # Debian — ficheros .dbx de Outlook Express
+reglookup        # Debian — registro NT
+winregfs         # Debian — registro Windows como FUSE
+grokevt          # Debian — logs de eventos de Windows
+samdump2         # Debian — hashes de SAM
+creddump7        # Debian — secretos de hives (post-mortem)
+regripper        # Debian — análisis de hives de registro

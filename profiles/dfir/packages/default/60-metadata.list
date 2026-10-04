@@ -1,0 +1,4 @@
+# triada-sec · DFIR · default · metadata
+# Metadatos de ficheros e imágenes. Debian stable (pin 500). Pendiente humo 16k.
+metacam          # Debian — EXIF de cámaras digitales
+exifprobe        # Debian — metadatos de imágenes
