@@ -8,6 +8,30 @@ on trixie/arm64/16k. Inherited = strong hint, not a guarantee. Ref codes:
   ik4(=iK4lN3 packages-apt.txt) · ik4-skip · remnux-silent · remnux-nopkg · virt(=forensics-* virtual)
 
 ## APT-OK  (verified on trixie via -s; core tier)
+snowdrop        APT-OK  catalog+s(trixie)  -- text watermarking, stego
+creddump7       APT-OK  catalog+s(trixie)  # registry secrets, post-mortem
+regripper       APT-OK  catalog+s(trixie)  # registry hive analysis
+readpe          APT-OK  catalog+s(trixie)  # PE static analysis
+missidentify    APT-OK  catalog+s(trixie)  # find Win32 executables
+stegcracker     APT-OK  catalog+s(trixie)  # steghide payload brute-force
+stegseek        APT-OK  catalog+s(trixie)  # fast steghide cracker
+ssldump         APT-OK  catalog+s(trixie)  # TLS analysis on capture
+dsniff          APT-OK  catalog+s(trixie)  # cleartext creds in seized traffic
+exifprobe       APT-OK  catalog+s(trixie)  # image metadata
+ed2k-hash       APT-OK  catalog+s(trixie)  # ed2k hashing
+argon2          APT-OK  catalog+s(trixie)  # argon2 hashing util
+ccrypt          APT-OK  catalog+s(trixie)  # file encrypt/decrypt
+bruteforce-luks APT-OK  catalog+s(trixie)  # LUKS passphrase recovery (evidence access)
+bruteforce-salted-openssl  APT-OK  catalog+s(trixie)  # OpenSSL passphrase recovery
+bruteforce-wallet  APT-OK  catalog+s(trixie)  # encrypted wallet passphrase
+rephrase        APT-OK  catalog+s(trixie)  # GnuPG passphrase recovery
+usbrip          APT-OK  catalog+s(trixie)  # USB device artifacts
+forensic-artifacts  APT-OK  catalog+s(trixie)  # forensic artifacts DB (data)
+forensics-colorize  APT-OK  catalog+s(trixie)  # colorized diff for analysis
+graudit         APT-OK  catalog+s(trixie)  # source-code audit by patterns
+gpshell         APT-OK  catalog+s(trixie)  # smartcard scripting (GlobalPlatform)
+de4dot          APT-OK  catalog+s(trixie) -- installs clean; Mono inst=49, assigned to full (Reason C)
+time-decode     APT-OK  catalog+s(trixie) -- installs clean; Qt6 inst=40, assigned to full (Reason C)
 sleuthkit       APT-OK  catalog+s(trixie)  # The Sleuth Kit; not from satellite
 ewf-tools       APT-OK  catalog+s(trixie)  # E01/EWF acquisition
 xmount          APT-OK  catalog+s(trixie)  # forensic image mounting, write-blocking
@@ -53,31 +77,31 @@ jdupes          APT?  ik4
 ### Hashing & integrity
 hashdeep        APT-OK  ik4+s(trixie)   # package: md5deep
 ssdeep          APT-OK  ik4+s(trixie)
-hashid          APT?  ik4
-hashrat         APT?  ik4
+hashid          APT-OK  ik4+s(trixie)
+hashrat         APT-OK  ik4+s(trixie)
 rhash           APT-OK  ik4+s(trixie)
 gtkhash         APT?  ik4
 
 ### Memory forensics
-memdump         APT?  ik4
-aesfix          APT?  ik4
-rsakeyfind      APT?  ik4
-unhide          APT?  ik4
-mac-robber      APT?  ik4
+memdump         APT-OK  ik4+s(trixie)
+aesfix          APT-OK  ik4+s(trixie)
+rsakeyfind      APT-OK  ik4+s(trixie)
+unhide          APT-OK  ik4+s(trixie)
+mac-robber      APT-OK  ik4+s(trixie)
 tableau-parm    APT-OK  ik4+s(trixie)
 
 ### Windows artifacts / registry
-galleta         APT?  ik4
-pasco           APT?  ik4
-rifiuti         APT?  ik4
-rifiuti2        APT?  ik4
-vinetto         APT?  ik4
-undbx           APT?  ik4
-reglookup       APT?  ik4
-winregfs        APT?  ik4
-grokevt         APT?  ik4
+galleta         APT-OK  ik4+s(trixie)
+pasco           APT-OK  ik4+s(trixie)
+rifiuti         APT-OK  ik4+s(trixie)
+rifiuti2        APT-OK  ik4+s(trixie)
+vinetto         APT-OK  ik4+s(trixie)
+undbx           APT-OK  ik4+s(trixie)
+reglookup       APT-OK  ik4+s(trixie)
+winregfs        APT-OK  ik4+s(trixie)
+grokevt         APT-OK  ik4+s(trixie)
 chntpw          APT?  ik4
-samdump2        APT?  ik4
+samdump2        APT-OK  ik4+s(trixie)
 
 ### Timeline / triage
 python3-plaso   APT?  ik4   # binaries: log2timeline.py, psort.py
@@ -87,18 +111,18 @@ mdbtools        APT?  ik4
 hexedit         APT?  ik4
 dhex            APT?  ik4
 hexcompare      APT?  ik4
-shed            APT?  ik4
+shed            APT-OK  ik4+s(trixie)
 ghex            APT?  ik4
 wxhexeditor     APT?  ik4
-radare2         APT?  ik4   # catalog also had it KALI-only (Debian retired it)
-capstone-tool   APT?  ik4
+radare2         KALI-OK  kali+s(trixie) -- --no-install-recommends, no libc bump
+capstone-tool   APT-OK  ik4+s(trixie)
 binwalk         APT?  ik4
 
 ### Steganography
-steghide        APT?  ik4
-stegsnow        APT?  ik4
+steghide        APT-OK  ik4+s(trixie)
+stegsnow        APT-OK  ik4+s(trixie)
 stegosuite      APT?  ik4
-outguess        APT?  ik4
+outguess        APT-OK  ik4+s(trixie)
 gifshuffle      APT?  ik4
 stepic          APT?  ik4
 
@@ -106,49 +130,50 @@ stepic          APT?  ik4
 exif            APT?  ik4
 exiftags        APT?  ik4
 exiv2           APT?  ik4
-metacam         APT?  ik4
+metacam         APT-OK  ik4+s(trixie)
 libimage-exiftool-perl  APT?  ik4   # binary: exiftool
 antiword        APT?  ik4
 catdoc          APT?  ik4
 unrtf           APT?  ik4
-pev             APT?  ik4
+pev             APT-OK  ik4+s(trixie)
 
 ### Secure wipe
 nwipe           APT?  ik4
-wipe            APT?  ik4
+wipe            APT-OK  ik4+s(trixie)
 bleachbit       APT?  ik4
 
 ### Network forensics / capture
 wireshark       APT?  ik4
 tshark          APT?  ik4
 tcpflow         APT?  ik4
-tcpick          APT?  ik4
+tcpick          APT-OK  ik4+s(trixie)
 tcpreplay       APT?  ik4
 tcptrace        APT?  ik4
 tcpxtract       APT?  ik4
-ngrep           APT?  ik4
-chaosreader     APT?  ik4
+ngrep           APT-OK  ik4+s(trixie)
+chaosreader     APT-OK  ik4+s(trixie)
 netdiscover     APT?  ik4
-nbtscan         APT?  ik4
+nbtscan         APT-OK  ik4+s(trixie)
 arp-scan        APT?  ik4
 
 ### Anti-rootkit / audit
-chkrootkit      APT?  ik4
+chkrootkit      APT-OK  ik4+s(trixie)
 rkhunter        APT?  ik4
 lynis           APT?  ik4
 
 ### Password recovery — file/disk (forensic, in scope)
-fcrackzip       APT?  ik4
+fcrackzip       APT-OK  ik4+s(trixie)
 pdfcrack        APT?  ik4
 rarcrack        APT?  ik4
 sipcrack        APT?  ik4
 ophcrack        APT?  ik4
-ophcrack-cli    APT?  ik4
+ophcrack-cli    APT-OK  ik4+s(trixie)
 
 ## APT-16K?  (in apt somewhere, but satellite saw x86-64 inside / exec risk)
 cutter          APT-16K?  remnux-silent  # ELF x86-64 on noble; verify rizin-cutter arm64 on trixie
 
 ## SOURCE  (no arm64 apt build; satellite builds from source — ADR 006)
+rizin           SOURCE  kali-breaks-base  -- Kali binary needs libc>=2.42, build from source
 floss           SOURCE  remnux-nopkg   # FLARE FLOSS (Mandiant)
 manalyze        SOURCE  remnux-nopkg
 pycdc           SOURCE  remnux-nopkg   # + pycdas
