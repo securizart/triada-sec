@@ -88,3 +88,5 @@ shows up.
                HackRF) are covered by the lighter default+hardware tools.
 - gqrx-sdr   -> pulls dkms (compiles kernel modules) — forbidden on Asahi base.
 - gnuradio (+gr-*), uhd-images -> heavyweight SDR framework + firmware blobs.
+- spiderfoot -> 63 pkgs (OSINT platform: local web server + scan DB).
+               Curation call: too heavy for the base; optional/full.
