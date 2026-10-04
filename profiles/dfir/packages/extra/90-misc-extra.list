@@ -1,0 +1,19 @@
+# triada-sec · DFIR · extra · misc-extra
+# Conversión, borrado, deduplicado, credenciales de ficheros y diccionarios. Debian stable.
+ansifilter       # Debian — convierte texto con ANSI a HTML/texto
+uni2ascii        # Debian — conversión Unicode<->ASCII
+dictconv         # Debian — conversión de diccionarios
+openpace         # Debian — criptografía de documentos de identidad (PACE)
+funcoeszz        # Debian — utilidades varias de shell
+readstat         # Debian — lee formatos estadísticos (SPSS/SAS/Stata)
+secure-delete    # Debian — borrado seguro (srm, sfill)
+nwipe            # Debian — borrado de discos
+fdupes           # Debian — ficheros duplicados
+jdupes           # Debian — duplicados (rápido)
+chntpw           # Debian — edita SAM / resetea contraseñas Windows
+pdfcrack         # Debian — passphrase de PDF
+rarcrack         # Debian — passphrase de RAR/ZIP/7z
+sipcrack         # Debian — credenciales SIP capturadas
+lynis            # Debian — auditoría de endurecimiento
+wamerican        # Debian — diccionario inglés (US) para cracking
+wbritish         # Debian — diccionario inglés (UK) para cracking

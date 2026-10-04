@@ -1,0 +1,10 @@
+# triada-sec · DFIR · extra · filesystem-extra
+# Sistemas de ficheros y particiones adicionales. Debian stable (pin 500). Pendiente humo 16k.
+erofs-utils      # Debian — EROFS
+exfatprogs       # Debian — exFAT
+gdisk            # Debian — tablas GPT
+parted           # Debian — particiones
+disktype         # Debian — detecta tipo de FS/medio
+cryptmount       # Debian — volúmenes cifrados
+ddrutility       # Debian — apoyo a ddrescue (mapeo de sectores)
+dares            # Debian — recuperación de datos

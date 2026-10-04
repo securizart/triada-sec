@@ -1,0 +1,7 @@
+# triada-sec · DFIR · extra · hardware-triage
+# Inventario de hardware para triaje en vivo (Incident Response, Capa B). Debian stable.
+hwinfo           # Debian — inventario de hardware
+lshw             # Debian — listado de hardware
+dmidecode        # Debian — tablas DMI/SMBIOS
+inxi             # Debian — resumen de sistema
+memstat          # Debian — uso de memoria por proceso

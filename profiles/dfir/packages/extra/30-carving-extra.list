@@ -1,0 +1,6 @@
+# triada-sec · DFIR · extra · carving-extra
+# Carving y recuperación adicionales. Debian stable (pin 500). Pendiente humo 16k.
+foremost         # Debian — carving por cabeceras
+testdisk         # Debian — recuperación de particiones y ficheros (incl. photorec)
+gddrescue        # Debian — GNU ddrescue
+dcfldd           # Debian — dd forense con hashing

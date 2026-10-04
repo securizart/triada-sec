@@ -1,0 +1,11 @@
+# triada-sec · DFIR · extra · image-doc
+# Imágenes y documentos: metadatos y análisis. Debian stable (pin 500). Pendiente humo 16k.
+pngcheck         # Debian — verifica/analiza PNG
+psrip            # Debian — extrae imágenes de PostScript
+imageindex       # Debian — galería HTML de imágenes de evidencia
+pecomato         # Debian — editor/analizador PE
+exif             # Debian — EXIF por CLI
+exiftags         # Debian — EXIF de JPEG
+exiv2            # Debian — metadatos de imagen
+libimage-exiftool-perl # Debian — exiftool
+stepic           # Debian — stego en imágenes

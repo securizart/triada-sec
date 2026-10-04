@@ -1,0 +1,13 @@
+# triada-sec · DFIR · extra · network-extra
+# Análisis de captura y red. Debian stable (pin 500). Pendiente humo 16k.
+tcpflow          # Debian — reensambla flujos TCP
+tcpreplay        # Debian — reinyecta tráfico de una captura
+tcptrace         # Debian — análisis de conexiones TCP
+pcapfix          # Debian — repara capturas pcap dañadas
+pcaputils        # Debian — utilidades pcap
+ipgrab           # Debian — volcado detallado de cabeceras
+dhcpdump         # Debian — tráfico DHCP
+sngrep           # Debian — flujos SIP (VoIP forense)
+sipgrep          # Debian — grep de SIP
+tshark           # Debian — Wireshark CLI
+netdiscover      # Debian — descubrimiento ARP pasivo/activo

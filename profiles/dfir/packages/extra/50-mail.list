@@ -1,0 +1,5 @@
+# triada-sec · DFIR · extra · mail
+# Análisis de correo. Debian stable (pin 500). Pendiente humo 16k.
+mboxgrep         # Debian — busca en buzones mbox
+mblaze           # Debian — manipulación de correo Maildir/MH
+mpack            # Debian — empaqueta/extrae MIME

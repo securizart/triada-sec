@@ -1,0 +1,25 @@
+# triada-sec · DFIR · extra · extraction
+# Descompresores de todo formato. La evidencia exfiltrada suele venir comprimida en
+# formatos poco comunes (lzip/zpaq/lrzip/arc/cab) e incrustada por esteganografía;
+# hay que deshacer la cadena stego->comprimido sin quedar bloqueado. Debian stable.
+arc              # Debian — archivos .arc
+brotli           # Debian — brotli
+bzip3            # Debian — bzip3
+cabextract       # Debian — Microsoft .cab
+clzip            # Debian — lzip (C)
+comprez          # Debian — .Z (compress)
+dact             # Debian — DACT
+lrzip            # Debian — long-range zip
+lz4              # Debian — LZ4
+lzop             # Debian — lzop
+minizip          # Debian — zip (minizip)
+mscompress       # Debian — formatos de compresión MS
+ncompress        # Debian — .Z clásico
+nomarch          # Debian — .arj
+plzip            # Debian — lzip paralelo
+rzip             # Debian — rzip
+squashfs-tools-ng # Debian — squashfs
+ugrep            # Debian — grep en archivos comprimidos
+unrar-free       # Debian — extracción RAR libre
+wzip             # Debian — wzip
+zpaq             # Debian — zpaq (alta compresión)

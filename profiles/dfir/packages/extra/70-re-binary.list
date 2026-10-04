@@ -1,0 +1,6 @@
+# triada-sec · DFIR · extra · re-binary
+# Análisis y manipulación de binarios. Debian stable (pin 500). Pendiente humo 16k.
+binutils         # Debian — objdump, readelf, strings, nm (análisis de ejecutables)
+nasm             # Debian — ensamblador (análisis/edición de shellcode)
+hexedit          # Debian — editor hexadecimal
+hexcompare       # Debian — comparación hexadecimal
