@@ -7,49 +7,55 @@ All lines here are INHERITED from the satellite (Ubuntu noble) until re-verified
 on trixie/arm64/16k. Inherited = strong hint, not a guarantee. Ref codes:
   ik4(=iK4lN3 packages-apt.txt) · ik4-skip · remnux-silent · remnux-nopkg · virt(=forensics-* virtual)
 
+## APT-OK  (verified on trixie via -s; core tier)
+sleuthkit       APT-OK  catalog+s(trixie)  # The Sleuth Kit; not from satellite
+ewf-tools       APT-OK  catalog+s(trixie)  # E01/EWF acquisition
+xmount          APT-OK  catalog+s(trixie)  # forensic image mounting, write-blocking
+tcpdump         APT-OK  catalog+s(trixie)  # network capture
+
 ## APT?  (satellite built via apt on Ubuntu noble; needs trixie -s check)
 
 ### Disk imaging & acquisition
-dc3dd           APT?  ik4
+dc3dd           APT-OK  ik4+s(trixie)
 dcfldd          APT?  ik4
 gddrescue       APT?  ik4   # binary: ddrescue
 ddrescueview    APT?  ik4
-afflib-tools    APT?  ik4
+afflib-tools    APT-OK  ik4+s(trixie)
 pff-tools       APT?  ik4
-safecopy        APT?  ik4
-myrescue        APT?  ik4
+safecopy        APT-OK  ik4+s(trixie)
+myrescue        APT-OK  ik4+s(trixie)
 
 ### Filesystem / partition analysis
 disktype        APT?  ik4
 testdisk        APT?  ik4   # also ships photorec
-gpart           APT?  ik4
-fatcat          APT?  ik4
+gpart           APT-OK  ik4+s(trixie)
+fatcat          APT-OK  ik4+s(trixie)
 hfsprogs        APT?  ik4
 exfat-fuse      APT?  ik4
 f2fs-tools      APT?  ik4
-ext3grep        APT?  ik4
-ext4magic       APT?  ik4
-extundelete     APT?  ik4
-scrounge-ntfs   APT?  ik4
+ext3grep        APT-OK  ik4+s(trixie)
+ext4magic       APT-OK  ik4+s(trixie)
+extundelete     APT-OK  ik4+s(trixie)
+scrounge-ntfs   APT-OK  ik4+s(trixie)
 dislocker       APT?  ik4
 zulucrypt-cli   APT?  ik4
 cryptmount      APT?  ik4
 
 ### File carving & recovery
 foremost        APT?  ik4
-scalpel         APT?  ik4
-magicrescue     APT?  ik4
-recoverjpeg     APT?  ik4
-recoverdm       APT?  ik4
+scalpel         APT-OK  ik4+s(trixie)
+magicrescue     APT-OK  ik4+s(trixie)
+recoverjpeg     APT-OK  ik4+s(trixie)
+recoverdm       APT-OK  ik4+s(trixie)
 fdupes          APT?  ik4
 jdupes          APT?  ik4
 
 ### Hashing & integrity
-hashdeep        APT?  ik4   # package: md5deep
-ssdeep          APT?  ik4
+hashdeep        APT-OK  ik4+s(trixie)   # package: md5deep
+ssdeep          APT-OK  ik4+s(trixie)
 hashid          APT?  ik4
 hashrat         APT?  ik4
-rhash           APT?  ik4
+rhash           APT-OK  ik4+s(trixie)
 gtkhash         APT?  ik4
 
 ### Memory forensics
@@ -58,7 +64,7 @@ aesfix          APT?  ik4
 rsakeyfind      APT?  ik4
 unhide          APT?  ik4
 mac-robber      APT?  ik4
-tableau-parm    APT?  ik4
+tableau-parm    APT-OK  ik4+s(trixie)
 
 ### Windows artifacts / registry
 galleta         APT?  ik4
