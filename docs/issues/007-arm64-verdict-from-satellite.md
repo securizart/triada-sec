@@ -19,6 +19,7 @@ docs/ARM64-NOTES.md records one line per tool with exactly ONE verdict from this
 closed set:
 
   APT-OK     arm64 build in Debian/Kali, passes `-s`            -> core or default
+  KALI-OK    installs clean from Kali (pin 100), base untouched   -> default (kali only, no Debian build)
   APT-16K?   in apt, but satellite flagged an execution risk    -> apt + priority smoke test
   APT?       satellite built it via apt on Ubuntu noble; unverified   -> apt tier after trixie -s check
   SOURCE     no arm64 apt build; satellite builds from source   -> source tier (ADR 006)
@@ -35,6 +36,10 @@ Rules:
 - A verdict is INHERITED (from the satellite) until re-verified on trixie/arm64/
   16k; a re-verified line says so in its note. Inherited is a strong hint, not a
   guarantee: Ubuntu noble having an arm64 build does not prove Debian trixie does.
+- KALI-OK is for a tool with no Debian build whose Kali candidate installs clean
+  under pin 100 (no libc/python3 bump). Verified with `apt-get install -s`, often
+  needing --no-install-recommends. It is NOT APT-OK (that means Debian). A Kali
+  candidate that would bump libc or python3 is NOT KALI-OK: it is SOURCE or full.
 - APT? is the inherited state of a tool the satellite installed via apt on Ubuntu
   noble. It becomes APT-OK only after `apt-get install -s` passes on trixie, or
   SOURCE / NO-ARM64 if it is not in Debian/Kali for arm64. Ubuntu noble package
