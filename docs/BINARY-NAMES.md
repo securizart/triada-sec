@@ -14,4 +14,20 @@ package name. The Phase 4 installer and any verification check must test
 | spike            | generic_send_tcp, generic_listen_tcp | no `spike` binary               |
 | sipvicious       | svmap, svwar, svcrack, svreport, svcrash | all `sv*`                   |
 
+| bloodhound.py    | bloodhound-python                | AD collector            |
+| certipy-ad       | certipy-ad                       | not `certipy`           |
+| peass            | linpeas, winpeas, peass          |                         |
+| passing-the-hash | pth-curl, pth-net, pth-rpcclient, pth-smbclient, ... | `pth-*` |
+| dns2tcp          | dns2tcpc, dns2tcpd               | client/daemon           |
+| upx-ucl          | upx                              |                         |
+| exe2hexbat       | exe2hex                          |                         |
+| redfang          | fang                             |                         |
+| blue-hydra       | blue_hydra                       | underscore              |
+| chirp            | chirpw, chirpc, experttune       | chirpw = GUI            |
+| kalibrate-rtl    | kal                              |                         |
+| hackrf           | hackrf_info, hackrf_transfer     |                         |
+| ubertooth        | ubertooth-rx, ubertooth-util...  | `ubertooth-*`           |
+
+Daemons in /usr/sbin (not /usr/bin): miredo, ptunnel, sslh.
+
 <!-- keep this table updated as new renamed-binary packages are added -->

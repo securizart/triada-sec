@@ -1,0 +1,17 @@
+# triada-sec · Red · default · web (extra)
+# Mezcla Debian/Kali. 16k-verificado.
+feroxbuster     # Kali — content discovery (Go)
+zaproxy         # Kali — OWASP ZAP (Java, GUI)
+httpx-toolkit   # Kali — toolkit HTTP (Go; bins: httpx-toolkit, httpx)
+skipfish        # Kali — escaner web activo
+commix          # Kali — inyeccion de comandos
+weevely         # Debian — webshell PHP ofuscada
+davtest         # Kali — test de WebDAV
+cadaver         # Debian — cliente WebDAV
+eyewitness      # Kali — screenshots masivos de webs (pesado ~21 deps)
+wafw00f         # Debian — deteccion de WAF
+laudanum        # Kali — webshells (recurso)
+webshells       # Kali — coleccion de webshells (recurso)
+lbd             # Kali — load balancing detector
+qsslcaudit      # Kali — auditoria de clientes TLS
+# nota: wpscan NO entra -> full (gem ruby-addressable >= 2.9)

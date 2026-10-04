@@ -1,0 +1,28 @@
+# triada-sec · Red · TIER default+hardware (OPCIONAL)
+# Requiere DISPOSITIVOS EXTERNOS (BT/SDR/RFID/JTAG). Funcion = Capa B (M1/M2).
+# En VM solo instala y arranca; sin dispositivo no operan.
+# Bluetooth
+spooftooph      # Kali — spoofing de dispositivos BT
+bluelog         # Kali — escaner/logger BT
+blueranger      # Kali — localizacion BT por RSSI
+bluesnarfer     # Kali — ataque bluesnarf
+btscanner       # Debian — escaner BT interactivo
+redfang         # Kali — descubrimiento BT oculto (bin: fang)
+crackle         # Kali — crackeo de cifrado BLE
+blue-hydra      # Kali — deteccion/seguimiento BT (bin: blue_hydra)
+ubertooth       # Kali — herramientas Ubertooth One (bins: ubertooth-*)
+# Radio / SDR (ligeros)
+multimac        # Kali — multiples MAC
+sakis3g         # Kali — conexion 3G/modem
+chirp           # Debian — programacion de radios (bins: chirpw, chirpc)
+multimon-ng     # Debian — decodificador de modos digitales
+kalibrate-rtl   # Kali — calibracion RTL-SDR (bin: kal)
+inspectrum      # Debian — analisis visual de capturas SDR
+hackrf          # Debian — herramientas HackRF (bins: hackrf_info, hackrf_transfer)
+rfdump          # Debian — volcado RFID
+# Hardware hacking
+flashrom        # Debian — lectura/escritura de chips flash
+openocd         # Debian — depuracion JTAG/SWD
+minicom         # Debian — terminal serie
+cutecom         # Debian — terminal serie GUI
+# nota: proxmark3 -> full (libc). gqrx-sdr/gnuradio/uhd-host -> full (dkms/peso)

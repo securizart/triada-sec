@@ -1,0 +1,8 @@
+# triada-sec · Red · default · misc
+# Mayoria Debian. 16k-verificado.
+sendemail       # Debian — envio SMTP desde CLI
+upx-ucl         # Debian — packer de ejecutables (bin: upx)
+axel            # Debian — descargador acelerado
+unar            # Debian — extractor multiformato
+exe2hexbat      # Kali — exe a hex/bat (bin: exe2hex)
+ncurses-hexedit # Debian — editor hexadecimal

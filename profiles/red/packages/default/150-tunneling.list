@@ -1,0 +1,14 @@
+# triada-sec · Red · default · tunneling / sniffing
+# Mayoria Debian, C de red. 16k-verificado.
+netsniff-ng     # Debian — suite de captura/analisis alto rendimiento
+cryptcat        # Kali — netcat cifrado
+sslsplit        # Debian — MITM TLS
+rdesktop        # Debian — cliente RDP
+proxytunnel     # Debian — tunel HTTP(S)
+ptunnel         # Debian — tunel sobre ICMP (bin en /usr/sbin)
+pwnat           # Kali — NAT traversal
+udptunnel       # Debian — tunel UDP
+redsocks        # Debian — redirector TCP->proxy
+sslh            # Debian — multiplexor SSL/SSH (bin en /usr/sbin)
+thc-pptp-bruter # Kali — fuerza bruta PPTP
+rebind          # Kali — DNS rebinding

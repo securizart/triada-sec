@@ -1,0 +1,9 @@
+# triada-sec · Red · default · active-directory / privesc (extra)
+# Kali via pin. Refuerzo AD y escalada. 16k-verificado.
+bloodhound.py        # Kali — colector BloodHound Python (bin: bloodhound-python)
+certipy-ad           # Kali — ataque AD CS / certificados (bin: certipy-ad)
+gpp-decrypt          # Kali — descifra GPP de AD
+peass                # Kali — winPEAS/linPEAS escalada (bins: linpeas, winpeas, peass)
+powersploit          # Kali — framework PowerShell (recurso)
+unix-privesc-check   # Kali — escalada en Unix
+passing-the-hash     # Kali — suite Pass-the-Hash (bins: pth-*)

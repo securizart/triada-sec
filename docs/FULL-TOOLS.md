@@ -72,3 +72,19 @@ Must be installed isolated (pipx/gem). Confirmed via `-s`:
 - Python: `pipx install <tool>` (or `git+https://...` when not on PyPI).
 - Ruby:   `gem install --user-install <tool>`.
 - Platforms: container / dedicated setup; review licenses (openvas) first.
+
+### Reason A — additions (base breakage, confirmed via -s)
+- wpscan     -> ruby-addressable >= 2.9 (base 2.8.7)  [gem]
+- proxmark3  -> libc6 >= 2.42 (base 2.41)  [+ needs physical reader/firmware]
+
+## Reason C — disproportionate weight for niche/absent hardware
+Installs clean, no base breakage, no backend — but pulls a huge dependency tree
+to support a specific, expensive, rarely-present device. Excluded from default
+by curation, not by a technical blocker. `apt install` adds it when the hardware
+shows up.
+- uhd-host   -> 218 pkgs (USRP/Ettus SDR driver + boost/DSP/build stack).
+               Kali ships it in kali-tools-sdr for max hardware coverage;
+               triada-sec curates for known hardware. Common SDRs (RTL-SDR,
+               HackRF) are covered by the lighter default+hardware tools.
+- gqrx-sdr   -> pulls dkms (compiles kernel modules) — forbidden on Asahi base.
+- gnuradio (+gr-*), uhd-images -> heavyweight SDR framework + firmware blobs.

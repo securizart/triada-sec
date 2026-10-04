@@ -1,0 +1,10 @@
+# triada-sec · Red · default · recon (extra)
+# Mayoria Debian. 16k-verificado.
+dnsmap          # Debian — DNS network mapper
+dns2tcp         # Debian — tunel DNS (bins: dns2tcpc, dns2tcpd)
+iodine          # Debian — tunel IP sobre DNS
+miredo          # Debian — tunel Teredo IPv6 (bin en /usr/sbin)
+urlscan         # Debian — extraccion de URLs
+sparta-scripts  # Kali — scripts auxiliares (sin binario, recurso)
+netmask         # Debian — utilidad de mascaras de red
+netsed          # Kali — edicion de paquetes en transito
